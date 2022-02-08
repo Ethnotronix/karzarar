@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>A Basic HTML5 Template</title>
+    <title>Kar mı Ettik Zarar mı Ettik?</title>
     <meta
       name="description"
-      content="A simple HTML5 Template for new projects."
+      content="Kura göre yaptığın satışın kar zarar oranını hesapla."
     />
-    <meta name="author" content="SitePoint" />
+    <meta name="author" content="KarZarar.co" />
 
-    <meta property="og:title" content="A Basic HTML5 Template" />
+    <meta property="og:title" content="Kar mı Ettik Zarar mı Ettik?" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://www.sitepoint.com/a-basic-html5-template/"
-    />
+    <meta property="og:url" content="https://www.karzarar.co/" />
     <meta
       property="og:description"
-      content="A simple HTML5 Template for new projects."
+      content="Kura göre yaptığın satışın kar zarar oranını hesapla."
     />
     <meta property="og:image" content="image.png" />
 
@@ -28,80 +25,71 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/reset.css" />
   </head>
 
   <body>
     <div class="main">
-        <div class="container">
-      <div class="header">
-        <h1>KAR ZARAR HESAPLA</h1>
-      </div>
-      <div class="first-container">
-        <div class="left">
-          <div class="title">
-            <h2>ALIŞ</h2>
+      <div class="container">
+        <div class="header">
+          <h1>KAR ZARAR HESAPLA</h1>
+        </div>
+        <div class="first-container">
+          <div class="left">
+            <div class="title">
+              <h2>ALIŞ</h2>
+            </div>
+            <div class="date">
+              <label> Aldığın Tarih </label>
+              <input
+                type="date"
+                id="buy-date"
+                name="trip-start"
+                value="2018-07-22"
+                min="2018-01-01"
+                max="2018-12-31"
+              />
+            </div>
+            <div class="price">
+              <label> Aldığın Fiyat </label>
+              <div class="input-currency">
+                <span class="currency">₺</span>
+                <input type="number" class="input-price" id="buy-price" />
+              </div>
+            </div>
           </div>
-          <div class="date">
-            <label>
-                Aldığın Tarih
-             </label>
-            <input
-              type="date"
-              id="buy-date"
-              name="trip-start"
-              value="2018-07-22"
-              min="2018-01-01"
-              max="2018-12-31"
-            />
-          </div>
-          <div class="price">
-            <label>
-                Aldığın Fiyat
-             </label>
-             <div class="input-currency">
-             <span class="currency">₺</span>
-            <input type="number" class="input-price" id="buy-price" />
-          </div>
+          <div class="right">
+            <div class="title">
+              <h2>SATIŞ</h2>
+            </div>
+            <div class="date">
+              <label for="sale-date"> Sattığın Tarih </label>
+
+              <input
+                type="date"
+                id="sale-date"
+                name="trip-start"
+                value="2018-07-22"
+                min="2018-01-01"
+                max="2018-12-31"
+              />
+            </div>
+            <div class="price">
+              <label> Sattığın Fiyat </label>
+              <div class="input-currency">
+                <span class="currency">₺</span>
+                <input type="number" class="input-price" id="sale-price" />
+              </div>
+            </div>
           </div>
         </div>
-        <div class="right">
-          <div class="title">
-            <h2>SATIŞ</h2>
-          </div>
-          <div class="date">
-              <label for="sale-date">
-                 Sattığın Tarih
-                </label>
-        
-                 <input
-                 type="date"
-                 id="sale-date"
-                 name="trip-start"
-                 value="2018-07-22"
-                 min="2018-01-01"
-                 max="2018-12-31"
-               />
-              
-          </div>
-          <div class="price">
-            <label>
-            Sattığın Fiyat
-         </label>
-         <div class="input-currency">
-         <span class="currency">₺</span>
-            <input type="number" class="input-price" id="sale-price" />
-          </div>
-          </div>
+        <div class="result-container">
+          <p class="loss"><span>SONUÇ:</span> 2000$ ZARAR ETTİN</p>
         </div>
-      </div>
-      <div class="result-container">
-        <p class="loss"><span>SONUÇ:</span> 2000$ ZARAR ETTİN</p>
       </div>
     </div>
-</div>
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
