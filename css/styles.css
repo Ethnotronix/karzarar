@@ -11,6 +11,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .main {
   background-image: linear-gradient(
     to top,
@@ -50,37 +51,44 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 .title h2 {
   font-size: 4rem;
   font-weight: 600;
   text-align: center;
   color: #385170;
 }
+
 .result-container {
   margin-top: 1rem;
   text-align: center;
   margin-bottom: 2rem;
 }
+
 .result-container h3 {
   font-size: 2.4rem;
   color: #385170;
 }
+
 .result-container p span {
   font-weight: 500;
   color: #000;
 }
+
 .result-container p {
   font-size: 1.9rem;
   font-weight: 400;
 }
+
 .result-container .summary {
   margin-top: 1rem;
   font-size: 2.2rem;
   font-weight: 600;
 }
+
 .result-container p.loss {
   color: rgba(255, 61, 47, 0.973);
-  text-shadow: 0px 1px #ac5d49;
+  text-shadow: 0 1px #ac5d49;
 }
 
 .result-container p.profit {
@@ -107,6 +115,7 @@ body {
   display: block;
   margin-bottom: 0.5rem;
 }
+
 input.input-price {
   border: none;
   outline: none;
@@ -115,6 +124,7 @@ input.input-price {
   font-weight: 500;
   width: 19.5rem;
 }
+
 .price-input-container {
   height: 4rem;
   margin-bottom: 2rem;
@@ -122,6 +132,7 @@ input.input-price {
   border-radius: 0.5rem;
   display: flex;
 }
+
 .price-input-container .symbol {
   font-size: 2rem;
   font-weight: 500;
@@ -155,20 +166,21 @@ input.input-price[type="number"] {
 
 /* Fill button styling: https://codepen.io/joebocock/pen/ZEWoMPb */
 .fill {
+  border-radius: 0.5rem;
   font-size: 20px;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 1px;
-  padding: 13px 50px 13px;
+  padding: 13px 50px;
   outline: 0;
-  border: 1px solid black;
+  border: 1px solid #000;
   cursor: pointer;
   position: relative;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 
 .fill::after {
   content: "";
-  background-color: #ffe54c;
+  background-color: #9fd3c7;
   width: 100%;
   z-index: -1;
   position: absolute;
@@ -176,28 +188,24 @@ input.input-price[type="number"] {
   top: 7px;
   left: 7px;
   transition: 0.2s;
+  border-radius: 0.5rem;
 }
+
+.fill:hover::after {
+  top: 0;
+  left: 0;
+}
+/* End of Fill Button  */
+
 .button-container {
   text-align: center;
   padding: 3rem;
 }
-.calculate-button {
-  border-radius: 0.5rem;
-}
-.calculate-button::after {
-  border-radius: 0.5rem;
-  background-color: #9fd3c7;
-}
-
-.fill:hover::after {
-  top: 0px;
-  left: 0px;
-}
-/* End of Fill Button  */
 
 .result-container {
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem;
 }
+
 .calculate-container {
   display: none;
 }
@@ -206,17 +214,20 @@ input.input-price[type="number"] {
   html {
     font-size: 7.3px;
   }
+
   .main {
     width: 100%;
     min-height: 100vh;
     border-radius: 0;
   }
+
   .result-container {
-    padding: 1rem 2rem 1rem 2rem;
+    padding: 1rem 2rem;
+  }
 }
-}
+
 @media screen and (max-width: 320px) {
   .button-container {
-    padding: 3rem 1rem 3rem 1rem;
+    padding: 3rem 1rem;
   }
 }
