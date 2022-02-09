@@ -21,9 +21,10 @@
     />
     <meta property="og:image" content="image.png" />
 
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/reset.css" />
@@ -53,8 +54,8 @@
             </div>
             <div class="price">
               <label> Aldığın Fiyat </label>
-              <div class="input-currency">
-                <span class="currency">₺</span>
+              <div class="price-input-container">
+                <span class="symbol">₺</span>
                 <input type="number" class="input-price" id="buy-price" />
               </div>
             </div>
@@ -77,15 +78,42 @@
             </div>
             <div class="price">
               <label> Sattığın Fiyat </label>
-              <div class="input-currency">
-                <span class="currency">₺</span>
+              <div class="price-input-container">
+                <span class="symbol">₺</span>
                 <input type="number" class="input-price" id="sale-price" />
               </div>
             </div>
           </div>
         </div>
+
+        <hr />
+        <div class="calculate-container">
+          <div class="button-container">
+        <button type="button" class="fill calculate-button" id="calculate-button">
+          HESAPLA
+        </button>
+      </div>
+      </div>
         <div class="result-container">
-          <p class="loss"><span>SONUÇ:</span> 2000$ ZARAR ETTİN</p>
+          <h3>SONUÇ</h3>
+          <p>
+            Ürünü aldığın <span>02.12.2020</span> tarihinde dolar kuru
+            <span>13,65₺</span> seviyesindeydi.<br />
+            Alış fiyatın olan <span>55.000₺</span> ile
+            <span>$4.000</span> alabilirdin.<br />
+            Sattığın <span>05.02.2022</span> tarihinde ise dolar kuru
+            <span>20₺</span> seviyesine yükselmiş. Satış fiyatın olan
+            <span>70.000₺</span> ile <span>$3500</span> alabilirdin.
+          </p>
+          <p class="summary loss">
+            Maalesef, yaptığın satıştan <b>$500</b><small>(15%)</small> zarar
+            ettin.
+          </p>
+          <div class="button-container">
+          <button type="button" class="fill calculate-button" id="calculate-button">
+            SIFIRLA
+          </button>
+        </div>
         </div>
       </div>
     </div>
