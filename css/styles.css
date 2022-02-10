@@ -96,6 +96,11 @@ body {
   text-shadow: 1px 1px #9fd3c7;
 }
 
+.result-container p.equal {
+  color: rgba(46, 160, 236, 0.973);
+  text-shadow: 0 1px #488fe0;
+}
+
 .date input {
   width: 22rem;
   height: 4rem;
@@ -204,11 +209,24 @@ input.input-price[type="number"] {
 
 .result-container {
   padding: 1rem 2rem;
-}
-
-.calculate-container {
   display: none;
 }
+
+.error {
+  outline: rgba(255, 61, 47, 0.973) 0px solid;
+  animation-name: error-animation;
+  animation-duration: 2s;
+  animation-iteration-count: 10;
+}
+@keyframes error-animation {
+  0% {outline-width: 1px;}
+  20% {outline-width: 2px;}
+  40% {outline-width: 3px;}
+  60% {outline-width: 2px;}
+  80% {outline-width: 1px;}
+  100% {outline-width: 0px;}
+}
+
 
 @media screen and (max-width: 767px) {
   html {

@@ -36,84 +36,83 @@
         <div class="header">
           <h1>KAR ZARAR HESAPLA</h1>
         </div>
-        <div class="first-container">
-          <div class="left">
-            <div class="title">
-              <h2>ALIŞ</h2>
+        <form id="calculate-form">
+          <div class="first-container">
+            <div class="left">
+              <div class="title">
+                <h2>ALIŞ</h2>
+              </div>
+              <div class="date">
+                <label> Aldığın Tarih </label>
+                <input
+                  type="date"
+                  id="buy-date"
+                  value="2022-02-09"
+                  min="2000-01-01"
+                />
+              </div>
+              <div class="price">
+                <label> Aldığın Fiyat </label>
+                <div class="price-input-container" id="buy-price-container">
+                  <span class="symbol">₺</span>
+                  <input type="number" class="input-price" id="buy-price" />
+                </div>
+              </div>
             </div>
-            <div class="date">
-              <label> Aldığın Tarih </label>
-              <input
-                type="date"
-                id="buy-date"
-                name="trip-start"
-                value="2018-07-22"
-                min="2018-01-01"
-                max="2018-12-31"
-              />
-            </div>
-            <div class="price">
-              <label> Aldığın Fiyat </label>
-              <div class="price-input-container">
-                <span class="symbol">₺</span>
-                <input type="number" class="input-price" id="buy-price" />
+            <div class="right">
+              <div class="title">
+                <h2>SATIŞ</h2>
+              </div>
+              <div class="date">
+                <label for="sale-date"> Sattığın Tarih </label>
+
+                <input
+                  type="date"
+                  id="sale-date"
+                  value="2022-02-10"
+                  min="2000-01-01"
+                />
+              </div>
+              <div class="price">
+                <label> Sattığın Fiyat </label>
+                <div class="price-input-container" id="sale-price-container">
+                  <span class="symbol">₺</span>
+                  <input type="number" class="input-price" id="sale-price" />
+                </div>
               </div>
             </div>
           </div>
-          <div class="right">
-            <div class="title">
-              <h2>SATIŞ</h2>
-            </div>
-            <div class="date">
-              <label for="sale-date"> Sattığın Tarih </label>
-
-              <input
-                type="date"
-                id="sale-date"
-                name="trip-start"
-                value="2018-07-22"
-                min="2018-01-01"
-                max="2018-12-31"
-              />
-            </div>
-            <div class="price">
-              <label> Sattığın Fiyat </label>
-              <div class="price-input-container">
-                <span class="symbol">₺</span>
-                <input type="number" class="input-price" id="sale-price" />
-              </div>
-            </div>
-          </div>
-        </div>
-
+        </form>
         <hr />
         <div class="calculate-container">
           <div class="button-container">
-        <button type="button" class="fill" id="calculate-button">
-          HESAPLA
-        </button>
-      </div>
-      </div>
+            <button type="button" class="fill" id="calculate-button">
+              HESAPLA
+            </button>
+          </div>
+        </div>
         <div class="result-container">
           <h3>SONUÇ</h3>
-          <p>
-            Ürünü aldığın <span>02.12.2020</span> tarihinde dolar kuru
-            <span>13,65₺</span> seviyesindeydi.<br />
-            Alış fiyatın olan <span>55.000₺</span> ile
-            <span>$4.000</span> alabilirdin.<br />
-            Sattığın <span>05.02.2022</span> tarihinde ise dolar kuru
-            <span>20₺</span> seviyesine yükselmiş. Satış fiyatın olan
-            <span>70.000₺</span> ile <span>$3500</span> alabilirdin.
-          </p>
-          <p class="summary loss">
-            Maalesef, yaptığın satıştan <b>$500</b><small>(15%)</small> zarar
-            ettin.
-          </p>
+          <div>
+            <p>
+              Ürünü aldığın <span>02.12.2020</span> tarihinde dolar kuru
+              <span>13,65₺</span> seviyesindeydi.<br />
+              Alış fiyatın olan <span>55.000₺</span> ile
+              <span>$4.000</span> alabilirdin.<br />
+              Sattığın <span>05.02.2022</span> tarihinde ise dolar kuru
+              <span>20₺</span> seviyesine yükselmiş. Satış fiyatın olan
+              <span>70.000₺</span> ile <span>$3500</span> alabilirdin.
+            </p>
+            <p class="summary loss">
+              Maalesef, yaptığın satıştan <b>$500</b><small>(15%)</small> zarar
+              ettin.
+            </p>
+          </div>
           <div class="button-container">
-          <button type="button" class="fill" id="reset-button">
-            SIFIRLA
-          </button>
-        </div>
+            <button type="button" class="fill" id="reset-button">
+              SIFIRLA
+            </button>
+          </div>
         </div>
       </div>
     </div>
