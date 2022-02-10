@@ -33,8 +33,8 @@ function numberFormatter(number) {
 }
 
 async function calculate(buyDate, saleDate, buyPrice, salePrice) {
-  const usdBuyDate = await getUsdTry(buyDate);
-  const usdSaleDate = await getUsdTry(saleDate);
+  const usdBuyDate = Number(await getUsdTry(buyDate));
+  const usdSaleDate = Number(await getUsdTry(saleDate));
   if (!usdBuyDate) {
     return `<p class="summary">Alış tarihi için fiyat bilgisi mevcut değil!</p>`;
   }
