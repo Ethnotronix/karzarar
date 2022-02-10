@@ -44,6 +44,7 @@ async function calculate(buyDate, saleDate, buyPrice, salePrice) {
   const usdBuyPrice = buyPrice / usdBuyDate;
   const usdSalePrice = salePrice / usdSaleDate;
   const result = usdSalePrice - usdBuyPrice;
+  const percentage = (Math.abs(result) / usdBuyPrice) * 100;
   let resultText = `<p>
   Ürünü aldığın <span>${dateFormatter(buyDate)}</span> tarihinde dolar kuru
   <span>₺${usdBuyDate.toFixed(2)}</span> seviyesindeydi.<br />
@@ -66,13 +67,13 @@ async function calculate(buyDate, saleDate, buyPrice, salePrice) {
     resultText += `<p class="summary profit">
     Tebrikler, yaptığın satıştan <b>$${numberFormatter(
       result
-    )}</b><small>(15%)</small> kar ettin.
+    )}</b><small>(%${percentage.toFixed(2)})</small> kar ettin.
   </p>`;
   } else {
     resultText += `<p class="summary loss">
     Maalesef, yaptığın satıştan <b>$${numberFormatter(
       Math.abs(result)
-    )}</b><small>(15%)</small> zarar ettin.
+    )}</b><small>(%${percentage.toFixed(2)})</small> zarar ettin.
   </p>`;
   }
   return resultText;
